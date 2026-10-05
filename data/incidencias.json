@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "usuarioId": 5,
+    "asunto": "La computadora se reinicia inesperadamente",
+    "categoria": "Hardware",
+    "prioridad": "Alta",
+    "estado": "Abierta",
+    "fecha": "2026-09-15",
+    "descripcion": "El equipo se reinicia automáticamente mientras se están ejecutando aplicaciones."
+  },
+  {
+    "id": 2,
+    "usuarioId": 2,
+    "asunto": "No se puede acceder al correo corporativo",
+    "categoria": "Software",
+    "prioridad": "Alta",
+    "estado": "En proceso",
+    "fecha": "2026-09-14",
+    "descripcion": "El usuario no puede iniciar sesión en su cuenta de correo corporativo."
+  },
+  {
+    "id": 3,
+    "usuarioId": 8,
+    "asunto": "Internet presenta conexión intermitente",
+    "categoria": "Conectividad",
+    "prioridad": "Media",
+    "estado": "Abierta",
+    "fecha": "2026-09-14",
+    "descripcion": "La conexión a Internet se pierde durante algunos minutos y luego se restablece."
+  },
+  {
+    "id": 4,
+    "usuarioId": 4,
+    "asunto": "La impresora no imprime documentos",
+    "categoria": "Hardware",
+    "prioridad": "Media",
+    "estado": "Resuelta",
+    "fecha": "2026-09-13",
+    "descripcion": "La impresora recibe los trabajos pero no comienza el proceso de impresión."
+  },
+  {
+    "id": 5,
+    "usuarioId": 7,
+    "asunto": "Error al abrir aplicación de inventario",
+    "categoria": "Software",
+    "prioridad": "Alta",
+    "estado": "En proceso",
+    "fecha": "2026-09-13",
+    "descripcion": "La aplicación de inventario muestra un mensaje de error al intentar iniciar."
+  },
+  {
+    "id": 6,
+    "usuarioId": 1,
+    "asunto": "Monitor muestra pantalla parpadeante",
+    "categoria": "Hardware",
+    "prioridad": "Baja",
+    "estado": "Cerrada",
+    "fecha": "2026-09-12",
+    "descripcion": "El monitor presenta parpadeos ocasionales durante el uso normal."
+  },
+  {
+    "id": 7,
+    "usuarioId": 6,
+    "asunto": "Problemas para conectarse a la VPN",
+    "categoria": "Conectividad",
+    "prioridad": "Alta",
+    "estado": "Abierta",
+    "fecha": "2026-09-12",
+    "descripcion": "El usuario no puede establecer una conexión con la VPN de la empresa."
+  },
+  {
+    "id": 8,
+    "usuarioId": 3,
+    "asunto": "Falta espacio en el disco duro",
+    "categoria": "Software",
+    "prioridad": "Media",
+    "estado": "En proceso",
+    "fecha": "2026-09-11",
+    "descripcion": "El disco principal tiene poco espacio disponible y muestra alertas de almacenamiento."
+  },
+  {
+    "id": 9,
+    "usuarioId": 9,
+    "asunto": "Mouse inalámbrico no funciona",
+    "categoria": "Hardware",
+    "prioridad": "Baja",
+    "estado": "Resuelta",
+    "fecha": "2026-09-11",
+    "descripcion": "El mouse inalámbrico dejó de responder aunque las baterías fueron reemplazadas."
+  },
+  {
+    "id": 10,
+    "usuarioId": 10,
+    "asunto": "Contraseña de usuario bloqueada",
+    "categoria": "Acceso",
+    "prioridad": "Alta",
+    "estado": "Cerrada",
+    "fecha": "2026-09-10",
+    "descripcion": "La cuenta del usuario fue bloqueada después de varios intentos fallidos de inicio de sesión."
+  }
+]

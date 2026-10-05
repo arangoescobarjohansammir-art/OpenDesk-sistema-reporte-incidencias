@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba ECharts</title>
+</head>
+<body>
+    <div id="graficoPrueba" style="height: 400px;">
+        
+    </div>
+    <script src="../../vendor/echarts/echarts.min.js"></script>
+    <script>
+        var contenedor = document.getElementById('graficoPrueba')
+        var grafico = echarts.init(contenedor)
+        var categorias = ['Hardware', 'Software', 'Red', 'Acceso']
+        var cantidades = [1, 5, 8, 6]
+
+        var opciones = {
+            title: {
+                text: 'incidencias por categoria'
+            },
+            xAxis: {
+                data: categorias
+            },
+            yAxis: {
+            },
+            series: [
+                {
+                    type: 'bar',
+                    data: cantidades,
+                    itemStyle: {
+                        color: 'blue'
+                    }
+                }
+            ]
+        }
+        grafico.setOption(opciones)
+    </script>
+</body>
+</html>

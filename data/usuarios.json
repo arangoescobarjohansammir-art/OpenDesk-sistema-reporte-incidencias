@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "nombre": "Carlos Rodríguez",
+    "correo": "carlos.rodriguez@empresa.com",
+    "rol": "Empleado",
+    "departamento": "Ventas",
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Laura Martínez",
+    "correo": "laura.martinez@empresa.com",
+    "rol": "Empleado",
+    "departamento": "Recursos Humanos",
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "Andrés Gómez",
+    "correo": "andres.gomez@empresa.com",
+    "rol": "Administrador",
+    "departamento": "Tecnología",
+    "activo": true
+  },
+  {
+    "id": 4,
+    "nombre": "Mariana López",
+    "correo": "mariana.lopez@empresa.com",
+    "rol": "Empleado",
+    "departamento": "Contabilidad",
+    "activo": true
+  },
+  {
+    "id": 5,
+    "nombre": "Daniel Torres",
+    "correo": "daniel.torres@empresa.com",
+    "rol": "Empleado",
+    "departamento": "Marketing",
+    "activo": true
+  },
+  {
+    "id": 6,
+    "nombre": "Sofía Ramírez",
+    "correo": "sofia.ramirez@empresa.com",
+    "rol": "Empleado",
+    "departamento": "Operaciones",
+    "activo": true
+  },
+  {
+    "id": 7,
+    "nombre": "Julián Herrera",
+    "correo": "julian.herrera@empresa.com",
+    "rol": "Supervisor",
+    "departamento": "Logística",
+    "activo": true
+  },
+  {
+    "id": 8,
+    "nombre": "Valentina Castro",
+    "correo": "valentina.castro@empresa.com",
+    "rol": "Empleado",
+    "departamento": "Ventas",
+    "activo": true
+  },
+  {
+    "id": 9,
+    "nombre": "Felipe Moreno",
+    "correo": "felipe.moreno@empresa.com",
+    "rol": "Empleado",
+    "departamento": "Producción",
+    "activo": false
+  },
+  {
+    "id": 10,
+    "nombre": "Camila Vargas",
+    "correo": "camila.vargas@empresa.com",
+    "rol": "Empleado",
+    "departamento": "Servicio al Cliente",
+    "activo": true
+  }
+]

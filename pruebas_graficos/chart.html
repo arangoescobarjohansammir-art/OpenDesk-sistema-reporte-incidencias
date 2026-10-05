@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba grafico chartJS</title>
+</head>
+
+<body>
+    <div id="graficoPrueba">
+        <canvas id="canvaGrafico">
+
+        </canvas>
+    </div>
+
+    <script src="../../vendor/chartjs/chart.umd.min.js"></script>
+    <script>
+        var canvas = document.getElementById('canvaGrafico')
+        var categorias = ['Hardware', 'Software', 'Red', 'Acceso']
+        var cantidades = [1, 5, 8, 6]
+        var grafico = new Chart(canvas, {
+            type: 'bar',
+            data: {
+                labels: categorias,
+                datasets: [
+                    {
+                        data: cantidades,
+                        backgroundColor: 'blue',
+                        label: 'Incidencias'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'incidencias por categoria'
+                    }
+                }
+            }
+        }
+        )
+    </script>
+</body>
+
+</html>

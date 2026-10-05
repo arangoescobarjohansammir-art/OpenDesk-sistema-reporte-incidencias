@@ -1,0 +1,121 @@
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #212529;
+    padding-top: 1rem;
+}
+
+
+#sidebar a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    /* se agregó transición para que el hover del enlace sea suave */
+    transition: background-color .15s ease-in-out;
+}
+
+/* se agregó hover y estado activo a los enlaces de la sidebar: fondo translúcido y, en el activo, color primario de Bootstrap para indicar dónde está el usuario */
+#sidebar a:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+#sidebar a.active {
+    background-color: var(--bs-primary);
+    font-weight: 600;
+}
+
+ 
+/* Insignias (prioridad, estado, activo): se unificó el estilo con forma de píldora (como .badge de Bootstrap: padding .35em .65em, border-radius 50rem, texto pequeño en negrita)
+   y se usaron los colores de tema de Bootstrap (--bs-*) con texto oscuro sobre fondos claros para mejorar el contraste (antes: texto blanco sobre amarillo/lima, difícil de leer).
+   Las clases (.prioridad.alta, .estado.proceso, .insignia.activo...) no cambian porque las genera el JavaScript. */
+.prioridad,
+.estado,
+.insignia {
+    display: inline-block;
+    padding: .35em .65em;
+    border-radius: 50rem;
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    color: #fff;
+}
+
+/* prioridad: baja = verde, media = amarillo, alta = naranja, crítica = rojo */
+.prioridad.baja    { background-color: var(--bs-success); }
+.prioridad.media   { background-color: var(--bs-warning); color: var(--bs-dark); }
+.prioridad.alta    { background-color: var(--bs-orange); }
+.prioridad.critica { background-color: var(--bs-danger); }
+
+/* estado: abierta = azul, en proceso = celeste, resuelta = verde, cerrada = gris */
+.estado.abierta  { background-color: var(--bs-primary); }
+.estado.proceso  { background-color: var(--bs-info); color: var(--bs-dark); }
+.estado.resuelta { background-color: var(--bs-success); }
+.estado.cerrada  { background-color: var(--bs-secondary); }
+
+/* usuario: activo = verde, inactivo = rojo */
+.insignia.activo   { background-color: var(--bs-success); }
+.insignia.inactivo { background-color: var(--bs-danger); }
+
+/* Botones de acción que genera el JS dentro de las tablas (btn btn-primary / btn-danger): se hicieron más compactos (variables --bs-btn-*) para que la fila no crezca */
+#usersTable td .btn,
+#incidenciasTable td .btn {
+    --bs-btn-padding-y: .25rem;
+    --bs-btn-padding-x: .6rem;
+    --bs-btn-font-size: .8rem;
+}
+
+.modal {
+    display: none;
+}
+
+.modal.open {
+    display: block;
+    /* se agregó fondo oscuro translúcido detrás del modal (el JS solo alterna la clase .open, no hay backdrop de Bootstrap) */
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* se agregó transform: none para que el modal abierto quede centrado (Bootstrap lo desplaza 50px hacia arriba si no tiene la clase .show) */
+.modal.open .modal-dialog {
+    transform: none;
+}
+
+main {
+    margin-left: 220px;
+    padding-left: 20px;
+}
+
+#menuMovil {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menuMovil {
+        display: block;
+        position: fixed;
+        z-index: 1100;
+        top: 0;
+        left: 0;
+    }
+    main {
+        margin-left: 0;
+    }
+    #sidebar {
+        display: none;
+    }
+
+    #sidebar.open {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        z-index: 1000;
+        background-color: #212529;
+    }
+}

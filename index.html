@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>Inicio - OpenDesk</title>
+  </head>
+
+  <body class="bg-body-tertiary">
+    <nav id="sidebar" class="shadow">
+      <div
+        class="px-3 pb-3 mb-2 fs-4 fw-bold text-white border-bottom border-secondary"
+      >
+        OpenDesk
+      </div>
+      <a
+        href="index.html"
+        class="rounded-2 mx-2 mb-1 active"
+        aria-current="page"
+        >Inicio</a
+      >
+      <a href="usuarios.html" class="rounded-2 mx-2 mb-1">Usuarios</a>
+      <a href="incidencias.html" class="rounded-2 mx-2 mb-1">Incidencias</a>
+      <a href="reportes.html" class="rounded-2 mx-2 mb-1">Reportes</a>
+    </nav>
+    <button
+      id="menuMovil"
+      class="btn btn-dark m-2 shadow-sm"
+      onclick="mostrarMenu()"
+      aria-label="Abrir menú"
+    >
+      ☰
+    </button>
+    <main class="p-4 pt-5 pt-md-4">
+      <h1 class="h2 fw-bold mb-4">Inicio</h1>
+
+      <div class="row row-tarjetas g-3 mb-3">
+        <div class="col-6 col-md-4 col-xl-2">
+          <div
+            class="card h-100 border-0 border-start border-4 border-primary shadow-sm rounded-3"
+          >
+            <div class="card-body">
+              <h5
+                class="card-title fs-6 text-secondary text-uppercase fw-semibold"
+              >
+                total Usuarios
+              </h5>
+              <p id="tarjetaTotalUsuarios" class="fs-2 fw-bold mb-0">_</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-xl-2">
+          <div
+            class="card h-100 border-0 border-start border-4 border-success shadow-sm rounded-3"
+          >
+            <div class="card-body">
+              <h5
+                class="card-title fs-6 text-secondary text-uppercase fw-semibold"
+              >
+                Usuarios activos
+              </h5>
+              <p id="tarjetaUsuariosActivos" class="fs-2 fw-bold mb-0">_</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <div
+            class="card h-100 border-0 border-start border-4 border-secondary shadow-sm rounded-3"
+          >
+            <div class="card-body">
+              <h5
+                class="card-title fs-6 text-secondary text-uppercase fw-semibold"
+              >
+                Usuarios Inactivos
+              </h5>
+              <p id="tarjetaUsuariosInactivos" class="fs-2 fw-bold mb-0">_</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <div
+            class="card h-100 border-0 border-start border-4 border-primary shadow-sm rounded-3"
+          >
+            <div class="card-body">
+              <h5
+                class="card-title fs-6 text-secondary text-uppercase fw-semibold"
+              >
+                Incidencias
+              </h5>
+              <p id="tarjetaIncidenciasTotales" class="fs-2 fw-bold mb-0">_</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <div
+            class="card h-100 border-0 border-start border-4 border-warning shadow-sm rounded-3"
+          >
+            <div class="card-body">
+              <h5
+                class="card-title fs-6 text-secondary text-uppercase fw-semibold"
+              >
+                Incidencias abiertas
+              </h5>
+              <p id="tarjetaIncidenciasAbiertas" class="fs-2 fw-bold mb-0">_</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <div
+            class="card h-100 border-0 border-start border-4 border-success shadow-sm rounded-3"
+          >
+            <div class="card-body">
+              <h5
+                class="card-title fs-6 text-secondary text-uppercase fw-semibold"
+              >
+                Incidencias Resueltas
+              </h5>
+              <p id="tarjetaIncidenciasResueltas" class="fs-2 fw-bold mb-0">
+                _
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-graficos g-3">
+        <div class="col-12 col-md-6">
+          <div class="card h-100 border-0 shadow-sm rounded-3">
+            <div class="card-body">
+              <h5 class="card-title fs-6 fw-semibold mb-3">
+                Cantidad de incidencias en cada estado
+              </h5>
+              <canvas id="graficoEstado"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card h-100 border-0 shadow-sm rounded-3">
+            <div class="card-body">
+              <h5 class="card-title fs-6 fw-semibold mb-3">
+                Cantidad de incidencias por categoría
+              </h5>
+              <canvas id="graficoCategorias"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="vendor/chartjs/chart.umd.min.js"></script>
+    <script src="vendor/localforage/localforage.min.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
